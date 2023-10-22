@@ -1,38 +1,107 @@
-.App {
-  text-align: center;
+a{
+    text-decoration: unset;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.container{
+    width: min( 100% - 15px, 1000px);
+    margin-inline: auto;
+}
+.section h1{
+    text-align: center;
+    margin: 3.5rem 0;
+}
+.tab__container{
+    margin: 2rem 0;
+    padding: 2rem 1rem;
+}
+.tab__header{
+    margin: 1.5rem 0;
+    text-align: center;
+}
+.tab__header h1{
+    font-size: 2.5rem;
+    margin-top: 2rem;
+}
+.tab__header .line{
+    margin: 7px auto;
+    max-width: 80px;
+    height: 4px;
+    background-color: var(--green);
+}
+.tab__content{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2.5rem;
+}
+.btn__container{
+    display: flex;
+    flex-direction: column; 
+    row-gap: 1.5rem;
+    margin-top: 1.5rem;
+    width: 160px;
+    height: 30px;
+}
+.btn__container .button{
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+    font-weight: 600;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+.tab__text-heading{
+    margin-top: 1.5rem;
+}
+.tab__text-heading h1{
+    font-size: 1.5rem;
+}
+.tab__text-heading p{
+    max-width: 120px;
+    text-align: center;
+    border-radius: 5px;
+    margin: 10px 0;
+    font-weight: bold;
+    font-size: 1.4rem;
+    padding: 2px ;
+    background: var(--grey);
+}
+.tab__text-content h4{
+    margin: 1rem 0;
+}
+.tab__text-content_duty{
+    max-width: 700px;
+}
+.tab__text-content_flex{
+    display: flex;
+    align-items: center;
+    margin-top: 1.5rem;
+    gap: 2rem;
+}
+.icon{
+    color: var(--green);
+    font-size: 1.8rem;
+}
+.btn__container .active{
+    border-left: 3px solid var(--green);
+    color: var(--green);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media only screen and (max-width: 830px){
+    .tab__content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .btn__container{
+        display: flex;
+        flex-direction: row; 
+        column-gap: 1.5rem;
+        margin-top: 1.5rem;
+    }
+    .btn__container .active{
+        border-left:none ;
+        border-bottom: 3px solid var(--green);
+    }
 }
